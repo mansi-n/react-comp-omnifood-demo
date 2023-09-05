@@ -37,9 +37,29 @@ Default: 1
   box-sizing: border-box;
 }
 
+html {
+  /* font-size: 10px;  */
+  /*so , 1 rem = 10px*/
+  /*create huge usability problems for users, who wants to increase or even to decrease font-size of their browsers => to avoid this don't set the font-size to a fixed value, USE percrntage of the default font-size*/
+  font-size: 62.5%; /* 10px/16px = 0.625 = 62.5% -- Percentage of user's browser font-size setting */
+}
+
 body {
   font-family: sans-serif;
   line-height: 1;
   font-weight: 400;
   color: #555; /* same as #555555 */
+}
+
+/*rem = root element's font-size, root of doc is HTML element(Parent element of all) , 1 rem = 16 px [default browser] untill we set font-size */
+/*max-width :- If container width >> specified max-width then width of element = value for max-width , width << max-width then width of element = 100% of container element width*/
+
+.test {
+  /* width: 1000px; */
+  /* max-width: 1000px;  */
+  background-color: red;
+  padding: 4rem;
+  max-width: 50rem; 
+  color: #fff;
+  font-size: 2rem;
 }
