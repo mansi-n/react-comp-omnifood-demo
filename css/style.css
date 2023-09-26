@@ -66,6 +66,30 @@ body {
 /* GENERAL REUSABLE COMPONENTS */
 /****************************/
 
+.container {
+  /*1140px*/
+  max-width: 120rem; /*1200px*/
+  margin: 0 auto; /* auto : give the same margin to the left & right side*/
+  padding: 0 3.2rem;
+}
+
+.grid {
+  display: grid;
+  gap: 9.6rem;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr); /*same as 1fr 1fr*/
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr); /*same as 1fr 1fr*/
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr); /*same as 1fr 1fr*/
+}
+
 .heading-primary {
   font-size: 5.2rem;
   font-weight: 700;
@@ -183,7 +207,7 @@ body {
 .hero {
   max-width: 130rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr; /*SAME as grid-template-columns: repeat(2, 1fr);*/
   margin: 0 auto;
   align-items: center;
   gap: 9.6rem;
@@ -232,4 +256,13 @@ body {
 .delivered-text span {
   color: #cf711f;
   font-weight: 700;
+}
+
+/****************************/
+/* HOW IT WORKS SECTION */
+/****************************/
+
+.section-how {
+  padding: 9.6rem 0;
+  background-color: orangered;
 }
