@@ -3,7 +3,8 @@
 ---RES(for Cutomer faces):uifaces---
 ---RES(for colorws contrast checker): https://coolors.co/contrast-checker/112a46-acc8e5
 ---RES(for tint & shade Generator): https://maketintsandshades.com/
-
+---RES(for icons): https://heroicons.com/ , https://ionic.io/ionicons
+---RES(for colors): https://yeun.github.io/open-color/
 
 ----> 01 TYPOGRAPHY SYSTEM (SEC-06 => accordion.html)
 - Font sizes (px)
@@ -44,6 +45,7 @@ Paragraph default: 1.6
 
 ----> 04 BORDER-RADIUS
 Default : 9px
+Medium : 11px
 
 ----> 05 WHITESPACE
 - Spacing system (px)
@@ -155,7 +157,8 @@ body {
 
   /* Put transition on original "state" */
   /* transition: all 1s; */
-  transition: background-color 0.3s;
+  /* transition: background-color 0.3s; */
+  transition: all 0.3s;
 }
 
 .btn--full:link, .btn--full:visited {
@@ -180,6 +183,34 @@ body {
   box-shadow: inset 0 0 0 3px #fff; /*inset keyword : shadow will basically be added to the inside of the element*/ /*replicate the border & the put it inset*/
 }
 
+.link:link, .link:visited {
+  display: inline-block;
+  color: #e67e22;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor; /*currentColor = text color*/
+  padding-bottom: 2px;
+  transition: all 0.3s;
+}
+
+.link:hover, .link:active {
+  color: #cf711f;
+  border-bottom: 1px solid transparent; /*to remove underline while hovering*/
+}
+
+/* HELPER/SETTINGS CLASSES */
+
 .margin-right-sm {
   margin-right: 1.6rem !important;
+}
+
+.margin-bottom-md {
+  margin-bottom: 4.8rem !important;
+}
+
+.center-text {
+  text-align: center;
+}
+
+strong {
+  font-weight: 500;
 }
